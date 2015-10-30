@@ -10,10 +10,16 @@ use App\Http\Controllers\Controller;
 
 class PostsController extends Controller
 {
+    protected $post;
+
+    public function __construct(Post $post)
+    {
+        $this->post = $post;
+    }
+
     public function index()
     {
-        $model = new Post();
-        $posts = $model->all();
+        $posts = $this->post->all();
 
         $data = compact('posts');
 

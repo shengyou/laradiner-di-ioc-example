@@ -12,7 +12,8 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
+        $model = new Post();
+        $posts = $model->all();
 
         $data = compact('posts');
 

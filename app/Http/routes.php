@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('posts', ['as' => 'posts.index', 'uses' => 'PostsController@index']);

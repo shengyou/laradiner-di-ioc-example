@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
+use App\Repositories\DbPostRepository;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -12,7 +12,7 @@ class PostsController extends Controller
 {
     protected $post;
 
-    public function __construct(Post $post)
+    public function __construct(DbPostRepository $post)
     {
         $this->post = $post;
     }

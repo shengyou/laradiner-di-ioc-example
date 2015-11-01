@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\DbPostRepository;
+use App\Repositories\ArrayPostRepository;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -12,7 +12,7 @@ class PostsController extends Controller
 {
     protected $post;
 
-    public function __construct(DbPostRepository $post)
+    public function __construct(ArrayPostRepository $post)
     {
         $this->post = $post;
     }
